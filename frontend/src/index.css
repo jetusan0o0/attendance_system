@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* 8ecae6-inspired theme tokens */
+@theme {
+  --color-brand-50: #f2f9fc;
+  --color-brand-100: #e2f2f9;
+  --color-brand-200: #bde4f4;
+  --color-brand-300: #8ecae6; /* Core requested hero color */
+  --color-brand-400: #5cb5dc;
+  --color-brand-500: #219ebc; /* Complementary deep sky cyan */
+  --color-brand-600: #147f9c;
+  --color-brand-700: #0d6179;
+  --color-brand-800: #023047; /* Midnight navy slate */
+  --color-brand-900: #011d2c;
+  --color-brand-950: #011018;
+
+  --color-status-present: #10b981;
+  --color-status-late: #f59e0b;
+  --color-status-absent: #ef4444;
+  --color-status-excused: #8b5cf6;
+}
+
+/* Global resets & typography */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #f6fafe;
+  color: #023047;
+}
+
+/* Custom glassmorphism & accent utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(142, 202, 230, 0.35);
+}
+
+.glass-panel-dark {
+  background: rgba(2, 48, 71, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(142, 202, 230, 0.25);
+}
+
+.glow-brand {
+  box-shadow: 0 0 25px -4px rgba(142, 202, 230, 0.45);
+}
+
+.glow-brand-sm {
+  box-shadow: 0 0 12px -2px rgba(142, 202, 230, 0.4);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f7fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bde4f4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8ecae6;
+}
